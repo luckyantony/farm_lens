@@ -1,0 +1,8 @@
+{
+  "name": "FarmLens",
+  "description": "A sustainable plant health advisor using Gemini 3 Pro for advanced multimodal diagnosis and reasoning.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
