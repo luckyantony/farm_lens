@@ -23,7 +23,7 @@ From Kenyan maize fields to global gardens, FarmLens tackles **$220–300B in an
 
 | Landing Page | Diagnosis (Whitefly) | Swahili Support |
 |:---:|:---:|:---:|
-| <img src="docs/landing.png" width="240" alt="Landing Page" /> | <img src="docs/whitefly_result.png" width="240" alt="Whitefly Diagnosis" /> | <img src="docs/swahili_rust.png" width="240" alt="Swahili Interface" /> |
+| <img src="docs/landing.png" width="240" alt="Landing Page" /> | <img src="docs/whitefly_result.png" width="240" alt="whitefly Diagnosis" /> | <img src="docs/swahili_rust.png" width="240" alt="Swahili Interface" /> |
 
 ---
 
