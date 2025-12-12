@@ -25,17 +25,17 @@ const analysisSchema: Schema = {
     },
     explanation: { 
       type: Type.STRING,
-      description: "Detailed explanation of the symptoms, causes, and reasoning."
+      description: "Detailed explanation of the symptoms/condition. If healthy, explain why it looks good."
     },
     remedies: { 
       type: Type.ARRAY,
       items: { type: Type.STRING },
-      description: "List of step-by-step sustainable, eco-friendly remedies."
+      description: "List of remedies for issues, OR maintenance tips if healthy."
     },
     prevention: { 
       type: Type.ARRAY, 
       items: { type: Type.STRING },
-      description: "List of prevention tips like crop rotation or spacing."
+      description: "List of prevention tips or best practices."
     },
     forecast: { 
       type: Type.STRING,
@@ -43,7 +43,7 @@ const analysisSchema: Schema = {
     },
     impactStats: { 
       type: Type.STRING,
-      description: "SDG 2 impact statement describing reduction in crop loss."
+      description: "Brief SDG 2 impact statement or economic benefit of treating this."
     },
     disclaimer: { 
       type: Type.STRING,
@@ -71,12 +71,13 @@ export const analyzePlantImage = async (
     1. First, verify if the image contains a plant or crop. If not, set 'isValidPlant' to false.
     2. Check image quality. If too blurry to diagnose, set 'isBlurry' to true.
     3. If valid and clear:
-       - Identify the issue (disease, pest, nutrient deficiency) or confirm if it is healthy.
-       - Provide a detailed explanation of the symptoms and cause.
+       - Identify the issue (disease, pest, deficiency).
+       - IMPORTANT: If the plant looks healthy, set 'issue' to 'Healthy Plant' and provide 'Maintenance Tips' in the 'remedies' array instead of cures.
+       - Provide a detailed explanation of the condition.
        - List step-by-step sustainable, eco-friendly remedies (e.g., organic sprays, mulch, manual removal).
        - List prevention tips (e.g., crop rotation, spacing).
        - Provide a growth forecast.
-       - Include specific impact stats related to SDG 2 (Zero Hunger).
+       - Include specific impact stats related to SDG 2 (Zero Hunger) or crop yield protection.
   `;
 
   try {
